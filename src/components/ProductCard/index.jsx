@@ -19,7 +19,7 @@ export function ProductCard({
   }
 
   return (
-    <div className="max-w-[210px] w-full p-1 hover:drop-shadow-md group bg-white rounded-lg">
+    <div className="max-w-[210px] drop-shadow-md lg:drop-shadow-none w-full p-1 lg:hover:drop-shadow-md group bg-white rounded-lg">
       <div className="relative flex justify-center">
         {discountPercentage && <Discount discountAmount={discountAmount} />}
 
@@ -27,7 +27,7 @@ export function ProductCard({
           <img
             src="/wishlist.svg"
             alt="Wishlist"
-            className="absolute right-3 top-3 hidden group-hover:block"
+            className="absolute right-3 top-3 lg:hidden lg:group-hover:block"
           />
         </button>
 
@@ -37,10 +37,10 @@ export function ProductCard({
           height={210}
           width={210}
           loading="lazy"
-          className="rounded-lg bg-[#ece6e8] object-contain aspect-square group-hover:bg-[#9e9b9c] cursor-pointer"
+          className="rounded-lg bg-[#9e9b9c] lg:bg-[#ece6e8] object-contain aspect-square lg:group-hover:bg-[#9e9b9c] cursor-pointer"
         />
 
-        <div className="absolute bottom-3 hidden group-hover:flex flex-col gap-2 w-[90%]">
+        <div className="absolute bottom-3 flex lg:hidden lg:group-hover:flex flex-col gap-2 w-[90%]">
           <CardButton
             btnText="Add to Cart"
             iconSrc="/cart.svg"
