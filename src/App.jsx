@@ -14,7 +14,7 @@ function App() {
   if (!products) return <div className="text-center">Loading...</div>;
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-8 justify-items-center w-fit mx-auto">
+    <section className="font-murecho grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-8 justify-items-center w-fit mx-auto">
       {products?.map((product, index) => (
         <ProductCard key={index} {...product} />
       ))}
