@@ -44,7 +44,6 @@ export function ProductCard({
           <CardButton
             btnText="Add to Cart"
             iconSrc="/cart.svg"
-            className="justify-between bg-[#03A629] px-2"
             quantity={cartQuantity}
             setCartQuantity={setCartQuantity}
           />
