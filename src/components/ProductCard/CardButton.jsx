@@ -22,7 +22,7 @@ export function CardButton({
         </div>
       ) : (
         <button
-          onClick={() => setCartQuantity((prev) => prev + 1)}
+          onClick={() => setCartQuantity(1)}
           className="flex justify-center items-center gap-2 w-full border-[1.5px] bg-[#ffffff4d] border-[#ffffff4d] rounded-md text-white backdrop-blur py-[2px] px-2"
         >
           <img src={iconSrc} alt={btnText} />
