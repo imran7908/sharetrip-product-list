@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CardButton } from "./CardButton";
+import { Discount } from "./Discount";
 
 export function ProductCard({
   images,
@@ -10,13 +11,18 @@ export function ProductCard({
 }) {
   const [cartQuantity, setCartQuantity] = useState(0);
 
-  let discountedPrice = 0;
-  if (discountPercentage)
-    discountedPrice = (price - (discountPercentage / 100) * price).toFixed(2);
+  let discountedPrice = 0,
+    discountAmount = 0;
+  if (discountPercentage) {
+    discountAmount = ((discountPercentage / 100) * price).toFixed(2);
+    discountedPrice = (price - discountAmount).toFixed(2);
+  }
 
   return (
     <div className="max-w-[210px] w-full p-1 hover:drop-shadow-md group bg-white rounded-lg">
       <div className="relative flex justify-center">
+        {discountPercentage && <Discount discountAmount={discountAmount} />}
+
         <button>
           <img
             src="/wishlist.svg"
